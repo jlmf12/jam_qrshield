@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <title>JAM QR Shield</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0078d4, #00b4ff);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 2.5rem;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      max-width: 380px;
+      width: 90%;
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    #install-btn {
+      margin-top: 2rem;
+      padding: 0.9rem 2rem;
+      font-size: 1rem;
+      background-color: white;
+      color: #0078d4;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.2s;
+      display: none;
+    }
+
+    #install-btn:hover {
+      background-color: #e6e6e6;
+    }
+
+    #installed-msg {
+      display: none;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <img src="icon-512.png" class="logo" alt="JAM Logo">
+    <h1>JAM QR Shield</h1>
+
+    <button id="install-btn">Instalar app</button>
+
+    <p id="installed-msg">La app ya está instalada</p>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
