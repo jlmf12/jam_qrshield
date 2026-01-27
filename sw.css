@@ -6,9 +6,10 @@ self.addEventListener("activate", (event) => {
   event.waitUntil(clients.claim());
 });
 
-// Redirigir cualquier navegación a index.html
 self.addEventListener("fetch", (event) => {
   if (event.request.mode === "navigate") {
-    event.respondWith(fetch("/index.html"));
+    event.respondWith(
+      fetch("/index.html").catch(() => caches.match("/index.html"))
+    );
   }
 });
